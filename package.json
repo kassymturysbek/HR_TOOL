@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "migrate": "knex migrate:latest",
-    "postdeploy": "npm run migrate && npm run start",
+    "seed": "knex seed:run",
+    "postdeploy": "npm run migrate && npm run seed && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
